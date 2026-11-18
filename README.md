@@ -2,10 +2,6 @@
 
 A lightweight, fast, and installable **Progressive Web App (PWA)** for generating custom placeholder text. Built with **Node.js** and **Express**, it provides both a clean web interface and a straightforward REST API for developers and designers.
 
-![Node.js](https://shields.io)
-![Express.js](https://shields.io)
-![JavaScript](https://shields.io)
-![PWA](https://shields.io)
 
 ---
 
