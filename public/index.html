@@ -3,31 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Генератор Lorem Ipsum</title>
+  <title>LoremFlow — Генератор Lorem Ipsum</title>
   <link rel="manifest" href="/manifest.json">
-  <style>
-    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
-    .controls { display: flex; gap: 10px; margin-bottom: 20px; align-items: flex-end; }
-    input { width: 80px; padding: 5px; }
-    button { padding: 6px 15px; cursor: pointer; }
-    #output { white-space: pre-wrap; background: #f4f4f4; padding: 15px; border-radius: 5px; }
-    nav { margin-bottom: 20px; }
-  </style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <nav>
-    <a href="/">Главная</a> | <a href="/about">О проекте</a>
-  </nav>
+  <div class="container">
+    <nav>
+      <a href="/" class="logo">📝 LoremFlow</a>
+      <div class="nav-links">
+        <a href="/" class="active">Генератор</a>
+        <a href="/about">О проекте</a>
+      </div>
+    </nav>
 
-  <h1>Генератор Lorem Ipsum</h1>
-  
-  <div class="controls">
-    <label>Слов в абзаце:<br><input type="number" id="words" value="20"></label>
-    <label>Абзацев:<br><input type="number" id="paragraphs" value="1"></label>
-    <button id="generateBtn">Сгенерировать</button>
+    <main class="card">
+      <h1>Генератор Lorem Ipsum</h1>
+      <p class="subtitle">Быстрая генерация текста-рыбы через Express API или офлайн</p>
+
+      <div class="controls">
+        <div class="input-group">
+          <label for="words">Слов в абзаце</label>
+          <input type="number" id="words" value="25" min="1" max="1000">
+        </div>
+        <div class="input-group">
+          <label for="paragraphs">Абзацев</label>
+          <input type="number" id="paragraphs" value="2" min="1" max="50">
+        </div>
+        <button id="generateBtn" class="btn-primary">Сгенерировать</button>
+      </div>
+
+      <div class="output-wrapper">
+        <div class="output-header">
+          <span class="stats" id="stats">Готов к работе</span>
+          <button id="copyBtn" class="btn-copy">Копировать</button>
+        </div>
+        <div id="output">Нажмите «Сгенерировать», чтобы получить текст...</div>
+      </div>
+    </main>
   </div>
-
-  <div id="output">Нажмите «Сгенерировать»...</div>
 
   <script src="/app.js"></script>
 </body>

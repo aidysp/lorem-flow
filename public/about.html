@@ -2,12 +2,31 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>О проекте</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О проекте — LoremFlow</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
-<body style="font-family: sans-serif; max-width: 600px; margin: 40px auto;">
-  <nav><a href="/">Главная</a> | <a href="/about">О проекте</a></nav>
-  <h1>Лабораторная работа №6</h1>
-  <p>Выполнил: Студент группы 932420, Вариант 19 (Генератор Lorem Ipsum).</p>
+<body>
+  <div class="container">
+    <nav>
+      <a href="/" class="logo">📝 LoremFlow</a>
+      <div class="nav-links">
+        <a href="/">Генератор</a>
+        <a href="/about" class="active">О проекте</a>
+      </div>
+    </nav>
+
+    <main class="card">
+      <h1>О проекте LoremFlow</h1>
+      <p class="subtitle">Лабораторная работа №6 • Вариант 19</p>
+      <p style="margin-bottom: 12px;">
+        Веб-приложение и REST API для генерации текста-рыбы (Lorem Ipsum) с поддержкой query-параметров и валидацией входных данных.
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">
+        <strong>Стек технологий:</strong> Node.js, Express, Vanilla JS, HTML5, CSS3, PWA (Service Worker + Web App Manifest).
+      </p>
+    </main>
+  </div>
 </body>
 </html>
 

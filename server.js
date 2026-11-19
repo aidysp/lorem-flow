@@ -43,7 +43,7 @@ app.get('/about', (req, res) => {
 app.get('/api/lorem', (req, res) => {
   const rawWords = req.query.words !== undefined ? req.query.words : '20';
   const rawParagraphs = req.query.paragraphs !== undefined ? req.query.paragraphs : '1';
-  
+
   const words = Number(rawWords);
   const paragraphs = Number(rawParagraphs);
 
